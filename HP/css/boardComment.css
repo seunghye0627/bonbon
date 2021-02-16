@@ -1,0 +1,55 @@
+#printComment li:nth-child(1) {
+    border-bottom: solid 1px #dddddd;
+    padding: 12px 12px 12px 0;
+}
+
+
+#printComment li:nth-child(2) {
+    border-bottom: solid 1px #CCCCCC;
+    padding: 12px;
+}
+#printComment li span:nth-child(1) {
+    padding: 10px;
+    
+}
+#printComment li span:nth-child(2) {
+    float:right;
+    
+}
+
+#comment {
+    width: 800px;
+   
+    margin: 0 auto;
+    
+}
+
+
+#comment li {
+   padding: 10px 0px 0px 0px;
+}
+#comment #textarea {
+    padding:10px;
+    height: 158px;
+    width: 800px;
+    display: inline-block;
+     margin-top: 10px;
+}
+
+#comment textarea {
+    width: 690px;
+    height: 130px;
+   
+    
+}
+
+#comment input {
+    width: 100px;
+    height: 130px;
+    float:right;
+    margin-right:5px;
+}
+#comment span {
+    padding:10px;
+}
+

@@ -1,0 +1,60 @@
+#writeBoard {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#writeBoard h3 {
+    margin-top: 30px;
+    padding: 10px;
+    border-bottom: solid 2px #516e7f;
+    font-size: 20px;
+}
+
+#writePost {
+    padding-left: 20px;
+}
+
+#writePost span {
+    display: inline-block;
+}
+
+#writePost .col1 {
+    width: 150px;
+}
+
+#writePost li {
+    border-bottom: solid 1px #dddddd;
+    padding: 10px;
+}
+
+#writePost input {
+    width: 500px;
+    height: 25px;
+}
+
+#writePost textarea {
+    width: 500px;
+    height: 150px;
+}
+
+#writePost #textarea {
+    position: relative;
+    height: 158px;
+}
+
+#writePost #textarea .col1 {
+    position: absolute;
+    top: 10px;
+}
+
+#writePost #textarea .col2 {
+    position: absolute;
+    left: 166px;
+}
+
+#writePost input[type="submit"] {
+    margin: 15px 0 30px 165px;
+    cursor: pointer;
+    height: 30px;
+}
+

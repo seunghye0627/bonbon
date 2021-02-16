@@ -1,0 +1,95 @@
+CREATE SCHEMA bonbon;
+
+use bonbon;
+
+CREATE TABLE userInfo(
+    num INTEGER NOT NULL AUTO_INCREMENT,
+    id VARCHAR(15) NOT NULL,
+    pass VARCHAR(15) NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    email VARCHAR(80),
+    regist_day VARCHAR(20),
+    level INTEGER,
+    point INTEGER,
+    PRIMARY KEY(num),
+    UNIQUE(id)
+);
+
+CREATE TABLE recipe (
+   recipeID int not null auto_increment,
+    recipeName varchar(30) not null,
+    recipeDatetime date,
+    recipeHit int,
+    Incredient text not null,
+    userID varchar(20) not null,
+    manual1 text,
+    manualImage1 blob,
+    manual2 text,
+    manualImage2 blob,
+    manual3 text,
+    manualImage3 blob,
+    manual4 text,
+    manualImage4 blob,
+    manual5 text,
+    manualImage5 blob,
+    manual6 text,
+    manualImage6 blob,
+    manual7 text,
+    manualImage7 blob,
+    manual8 text,
+    manualImage8 blob,
+    manual9 text,
+    manualImage9 blob,
+    manual10 text,
+    manualImage10 blob,
+    manual11 text,
+    manualImage11 blob,
+    manual12 text,
+    manualImage12 blob,
+    manual13 text,
+    manualImage13 blob,
+    manual14 text,
+    manualImage14 blob,
+    manual15 text,
+    manualImage15 blob,
+    primary key(recipeID),
+    foreign key (userID) references userInfo(id)
+);
+
+CREATE TABLE board(
+   boardID int not null auto_increment,
+    title varchar(100) not null,
+    boardContent text not null,
+    boardHit int,
+    boardDatetime date,
+    userID varchar(15) not null,
+    primary key(boardID),
+    foreign key(userID) references userInfo(id)
+);
+CREATE TABLE boardComment(
+   commentID int not null auto_increment,
+    commentContent text not null,
+    commentDatetime date,
+    parentNum int default 0,
+    boardID int not null,
+    userID varchar(15) not null,
+    primary key(commentID),
+    foreign key(userID) references userInfo(id),
+   constraint boardCommentFK Foreign Key (boardID) REFERENCES board(boardID) ON DELETE CASCADE
+);
+
+
+CREATE TABLE message(
+    num INTEGER AUTO_INCREMENT,
+    send_id VARCHAR(15) NOT NULL,
+    rv_id VARCHAR(15) NOT NULL,
+    subject VARCHAR(20) NOT NULL,
+    content TEXT,
+    regist_day VARCHAR(20),
+    PRIMARY KEY(num),
+    FOREIGN KEY(send_id) REFERENCES userInfo(id),
+    FOREIGN KEY(rv_id) REFERENCES userInfo(id)
+);
+
+
+//프로젝트 내 user 쿼리를 userInfo로 수정 or userInfo를 user로 수정해서 사용하세요

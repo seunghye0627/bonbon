@@ -1,0 +1,9 @@
+#wrapper{ position: absolute; top: 10px; left: 10px; width: 1400px; margin-top: 176px; margin-bottom: 20px; }
+
+#menu_content{ width: 1000px; float: left; padding: 10px; margin-left: 90px;}
+
+#sidebar{ width: 200px; float: left; padding: 10px; margin-left: 10px; }
+
+#recipe_menu li{border-bottom: solid 1px #dfb7b7; padding: 7px;}
+
+.product{ width: 220px; margin-bottom: 10px; }

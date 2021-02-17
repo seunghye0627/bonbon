@@ -31,8 +31,7 @@
 	
 	echo "
 		<script>
-			alert('쪽지 송신 완료');
-			location.href = './message_form.php';
+			history.back();
 		</script>
 	";
 ?>

@@ -39,7 +39,7 @@
 						$content = $row['content'];
 						
 						//$content는 줄바꿈 있을 수 있음
-						$content = str_replace("\n", "<br>", $content);
+						$content = str_replace("\n", "<br", $content);
 						$content = str_replace(" ","&nbsp", $content);
 						
 						$msg_id = ($mode == "send")?$rv_id:$send_id;

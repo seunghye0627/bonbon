@@ -1,6 +1,13 @@
 <?php
 	session_start();
 ?>
+
+<script src="./js/jquery-3.1.1.min.js"></script> 
+<script src="./js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="./css/bootstrap.min.css"> 
+<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -49,7 +56,7 @@
 								</li>                                
 							</ul>
 							<!-- 서밋버튼 -->
-							<input type="submit" value="보내기">
+							<input type="submit" class="btn btn-primary" value="보내기">
 						</div>
 					</form>
 				</div>

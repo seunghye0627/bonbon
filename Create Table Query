@@ -53,7 +53,7 @@ CREATE TABLE recipe (
     manual15 text,
     manualImage15 blob,
     primary key(recipeID),
-    foreign key (userID) references userInfo(id)
+    constraint userID_recipe_FK Foreign Key (userID) REFERENCES userinfo(id) ON DELETE CASCADE
 );
 
 CREATE TABLE board(
@@ -64,7 +64,7 @@ CREATE TABLE board(
     boardDatetime date,
     userID varchar(15) not null,
     primary key(boardID),
-    foreign key(userID) references userInfo(id)
+    constraint userID_board_FK Foreign Key (userID) REFERENCES userinfo(id) ON DELETE CASCADE
 );
 CREATE TABLE boardComment(
    commentID int not null auto_increment,
@@ -74,8 +74,8 @@ CREATE TABLE boardComment(
     boardID int not null,
     userID varchar(15) not null,
     primary key(commentID),
-    foreign key(userID) references userInfo(id),
-   constraint boardCommentFK Foreign Key (boardID) REFERENCES board(boardID) ON DELETE CASCADE
+    constraint userID_comment_FK Foreign Key (userID) REFERENCES userinfo(id) ON DELETE CASCADE,
+   	constraint boardComment_FK Foreign Key (boardID) REFERENCES board(boardID) ON DELETE CASCADE
 );
 
 
@@ -88,8 +88,6 @@ CREATE TABLE message(
     regist_day VARCHAR(20),
     PRIMARY KEY(num),
     FOREIGN KEY(send_id) REFERENCES userInfo(id),
-    FOREIGN KEY(rv_id) REFERENCES userInfo(id)
+	constraint sendID_message_FK Foreign Key (send_id) REFERENCES userinfo(id) ON DELETE CASCADE,
+    constraint rvID_message_FK Foreign Key (rv_id) REFERENCES userinfo(id) ON DELETE CASCADE
 );
-
-
-//프로젝트 내 user 쿼리를 userInfo로 수정 or userInfo를 user로 수정해서 사용하세요

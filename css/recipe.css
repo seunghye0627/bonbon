@@ -1,0 +1,41 @@
+#wrapper {
+
+    width: 1300px;
+    margin: 0 auto;
+    overflow:hidden;
+    margin-top: 30px;
+}
+
+#menu_content {
+    width: 1000px;
+    float: left;
+    height: auto;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+#sidebar {
+    width: 200px;
+    float: left;
+    padding: 10px;
+
+}
+
+#recipe_menu li {
+    border-bottom: solid 1px #dfb7b7;
+    padding: 7px;
+}
+
+.product {
+    width: 220px;
+    margin-bottom: 10px;
+}
+#writeRecipeBtn button{
+    
+    
+    float:right;
+    margin: 10px 190px 10px 0px;
+    margin-bottom: 30px;
+    
+    
+}
